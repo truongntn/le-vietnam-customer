@@ -9,7 +9,6 @@ interface WelcomeScreenProps {
 }
 
 export default function WelcomeScreen({ onTap }: WelcomeScreenProps) {
-  
   return (
     <motion.div
       className="relative w-full h-full overflow-hidden cursor-pointer"
@@ -109,7 +108,7 @@ export default function WelcomeScreen({ onTap }: WelcomeScreenProps) {
           }}
         >
           <h1 className="text-4xl font-bold mb-2">TAP TO</h1>
-          <h1 className="text-5xl font-bold">VIEW ORDERS</h1>
+          <h1 className="text-7xl font-bold">ORDER</h1>
         </motion.div>
 
         {/* Beauty Icons */}

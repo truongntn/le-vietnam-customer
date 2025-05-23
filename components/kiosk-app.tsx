@@ -6,9 +6,11 @@ import WelcomeScreen from "./welcome-screen";
 import CheckinScreen from "./checkin-screen";
 import SuccessScreen from "./success-screen";
 import KitchenScreen from "./kitchen-screen";
+import OrderScreen from "./order-screen";
 import axios from "axios";
+import { useCustomerStore } from "@/lib/store"
 
-type Screen = "welcome" | "checkin" | "success" | "kitchen";
+type Screen = "welcome" | "checkin" | "success" | "kitchen" | "order";
 
 export default function KioskApp() {
   const [currentScreen, setCurrentScreen] = useState<Screen>("welcome");
@@ -16,9 +18,11 @@ export default function KioskApp() {
   const [points, setPoints] = useState(0);
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomePhone] = useState("");
+  const addCustomer = useCustomerStore((state) => state.addCustomer)
+  const customerId = addCustomer("", "")
 
   const handleWelcomeClick = () => {
-    setCurrentScreen("kitchen");
+    setCurrentScreen("order");
   };
 
   const handleCheckin = async () => {
@@ -80,6 +84,19 @@ export default function KioskApp() {
             className="w-full h-full"
           >
             <KitchenScreen />
+          </motion.div>
+        )}
+
+        {currentScreen === "order" && (
+          <motion.div
+            key="welcome"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <OrderScreen params={{ customerId }}/>
           </motion.div>
         )}
 
