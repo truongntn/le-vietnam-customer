@@ -246,12 +246,12 @@ export default function OrderScreen({
               className="object-contain"
             />
           </div>
-          <h1 className="text-lg md:text-xl font-bold">Le Vietnam - Order System</h1>
+          <h1 className="text-md md:text-xl font-bold">Le Vietnam - Order System</h1>
           <div className="w-20"></div> {/* Empty div for flex spacing */}
         </div>
       </header>
 
-      <main className="container mx-auto p-4 overflow-y-auto"style={{ paddingBottom: "2.5rem" }}>
+      <main className="container mx-auto p-4 overflow-y-auto"style={{ paddingBottom: "3rem" }}>
         {/* Customer Information */}
         <div
           className="bg-white rounded-lg shadow-lg  mb-6"
