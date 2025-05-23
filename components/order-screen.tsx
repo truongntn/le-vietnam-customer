@@ -251,7 +251,7 @@ export default function OrderScreen({
         </div>
       </header>
 
-      <main className="container mx-auto p-4 overflow-y-auto"style={{ paddingBottom: "3rem" }}>
+      <main className="container mx-auto p-4 overflow-y-auto"style={{ paddingBottom: "4rem" }}>
         {/* Customer Information */}
         <div
           className="bg-white rounded-lg shadow-lg  mb-6"
