@@ -238,7 +238,7 @@ export default function OrderScreen({
           {/*<button onClick={() => router.back()} className="flex items-center text-white">
            <ArrowLeft className="mr-2" /> Back
           </button>*/}
-          <div className="w-24 h-12 relative">
+          <div className="w-20 h-12 relative">
             <Image
               src="/images/le-vietnam.jpg"
               alt="LE VIETNAM"
@@ -247,7 +247,7 @@ export default function OrderScreen({
             />
           </div>
           <h1 className="text-md md:text-xl font-bold">Le Vietnam - Order System</h1>
-          <div className="w-20"></div> {/* Empty div for flex spacing */}
+          <div className="md:w-20"></div> {/* Empty div for flex spacing */}
         </div>
       </header>
 
