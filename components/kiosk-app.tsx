@@ -96,7 +96,7 @@ export default function KioskApp() {
             transition={{ duration: 0.5 }}
             className="w-full h-full"
           >
-            <OrderScreen params={{ customerId }}/>
+            <OrderScreen params={{ customerId }} setCurrentScreen={setCurrentScreen}/>
           </motion.div>
         )}
 
@@ -132,6 +132,7 @@ export default function KioskApp() {
               points={points}
               customerName={customerName}
               customerPhone={customerPhone}
+              setCurrentScreen={setCurrentScreen}
             />
           </motion.div>
         )}

@@ -10,8 +10,10 @@ import { initiatePayment, createFallbackPayment } from "@/lib/payment-service";
 
 export default function OrderScreen({
   params,
+  setCurrentScreen,
 }: {
   params: { customerId: string };
+  setCurrentScreen: (screen: Screen) => void;
 }) {
   const router = useRouter();
   const { customerId } = params;
@@ -190,9 +192,9 @@ export default function OrderScreen({
           setPaymentStatus("idle");
           setIsProcessingPayment(false);
 
-          // Redirect to kitchen display after a delay
+          // Redirect to success display after a delay
           setTimeout(() => {
-            router.push("/kitchen");
+            setCurrentScreen("success");
           }, 2000);
         }
       } else {
@@ -227,7 +229,10 @@ export default function OrderScreen({
   }
 
   return (
-    <div className="min-h-screen bg-[#FFD943]" style={{ overflowY: "auto", height: "100vh" }}>
+    <div
+      className="min-h-screen bg-[#FFD943]"
+      style={{ overflowY: "auto", height: "100vh" }}
+    >
       <header className="bg-[#E05A3A] text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/*<button onClick={() => router.back()} className="flex items-center text-white">
@@ -248,7 +253,10 @@ export default function OrderScreen({
 
       <main className="container mx-auto p-4 overflow-y-auto">
         {/* Customer Information */}
-        <div className="bg-white rounded-lg shadow-lg  mb-6" style={{ borderRadius: "0.5rem" }}>
+        <div
+          className="bg-white rounded-lg shadow-lg  mb-6"
+          style={{ borderRadius: "0.5rem" }}
+        >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Your Information</h2>
             <p className="text-sm">Please enter your contact details</p>
@@ -314,7 +322,10 @@ export default function OrderScreen({
         </div>
 
         {/* Product Selection */}
-        <div className="bg-white rounded-lg shadow-lg  mb-6"style={{ borderRadius: "0.5rem" }}>
+        <div
+          className="bg-white rounded-lg shadow-lg  mb-6"
+          style={{ borderRadius: "0.5rem" }}
+        >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Select Bread</h2>
             <p className="text-sm">Choose from our freshly baked options</p>
@@ -380,7 +391,10 @@ export default function OrderScreen({
         </div>
 
         {/* Order Summary */}
-        <div className="bg-white rounded-lg shadow-lg  mb-6"style={{ borderRadius: "0.5rem" }}>
+        <div
+          className="bg-white rounded-lg shadow-lg  mb-6"
+          style={{ borderRadius: "0.5rem" }}
+        >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Order Summary</h2>
           </div>
