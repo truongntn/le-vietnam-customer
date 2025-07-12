@@ -138,23 +138,18 @@ export default function OrderScreen({
 
     try {
       const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:5000/";
-      const res = await axios.post(
-        BACKEND_URL + "api/orders",
-        {
-            "phone": "0123456789",
-  "name": "Nguyen Van A",
-  "items": [
-    {
-      "productName": "Pho Bo",
-      "productId": "PHO001",
-      "quantity": 2,
-      "unitPrice": 15.00,
-      "note": "Extra noodles, less spicy"
-    }
-  ],
-  "paymentMethod": "cash"
-        }
-      );
+      const res = await axios.post(BACKEND_URL + "api/orders", {
+        phone: phone,
+        name: name,
+        items: itemsToOrder.map((item) => ({
+          productName: item.name,
+          productId: item.id,
+          quantity: item.quantity,
+          unitPrice: item.price,
+          note: "", // Add note if available
+        })),
+        paymentMethod: "cash",
+      });
 
       const resCheckin = await axios.get(
         process.env.BACKEND_URL + "api/checkin/",
@@ -164,8 +159,6 @@ export default function OrderScreen({
       console.error("Error marking as completed:", error);
     } finally {
     }
-  };
-
 
     // Process payment
     setPaymentStatus("processing");
@@ -278,12 +271,17 @@ export default function OrderScreen({
               className="object-contain"
             />
           </div>
-          <h1 className="text-md md:text-xl font-bold">Le Vietnam - Order System</h1>
+          <h1 className="text-md md:text-xl font-bold">
+            Le Vietnam - Order System
+          </h1>
           <div className="md:w-20"></div> {/* Empty div for flex spacing */}
         </div>
       </header>
 
-      <main className="container mx-auto p-4 overflow-y-auto"style={{ paddingBottom: "4rem" }}>
+      <main
+        className="container mx-auto p-4 overflow-y-auto"
+        style={{ paddingBottom: "4rem" }}
+      >
         {/* Customer Information */}
         <div
           className="bg-white rounded-lg shadow-lg  mb-6"
