@@ -146,9 +146,9 @@ export default function OrderScreen({
           productId: item.id,
           quantity: item.quantity,
           unitPrice: item.price,
-          note: "", // Add note if available
         })),
         paymentMethod: "cash",
+        note: "", // Add note if available
       });
 
       const resCheckin = await axios.get(
