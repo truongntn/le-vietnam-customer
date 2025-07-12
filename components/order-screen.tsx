@@ -7,6 +7,7 @@ import { Minus, Plus, ArrowLeft, CreditCard, User, Phone } from "lucide-react";
 import { breadProducts } from "@/lib/bread-data";
 import { useCustomerStore, type OrderItem } from "@/lib/store";
 import { initiatePayment, createFallbackPayment } from "@/lib/payment-service";
+import axios from "axios";
 
 export default function OrderScreen({
   params,
@@ -134,6 +135,37 @@ export default function OrderScreen({
 
     // Update customer order in store
     updateCustomerOrder(customerId, itemsToOrder, totalAmount);
+
+    try {
+      const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:5000/";
+      const res = await axios.post(
+        BACKEND_URL + "api/orders",
+        {
+            "phone": "0123456789",
+  "name": "Nguyen Van A",
+  "items": [
+    {
+      "productName": "Pho Bo",
+      "productId": "PHO001",
+      "quantity": 2,
+      "unitPrice": 15.00,
+      "note": "Extra noodles, less spicy"
+    }
+  ],
+  "paymentMethod": "cash"
+        }
+      );
+
+      const resCheckin = await axios.get(
+        process.env.BACKEND_URL + "api/checkin/",
+        {}
+      );
+    } catch (error) {
+      console.error("Error marking as completed:", error);
+    } finally {
+    }
+  };
+
 
     // Process payment
     setPaymentStatus("processing");
