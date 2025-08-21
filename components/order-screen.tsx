@@ -255,7 +255,7 @@ export default function OrderScreen({
 
   return (
     <div
-      className="min-h-screen bg-[#FFD943]"
+      className="min-h-screen bg-[#070923]"
       style={{ overflowY: "auto", height: "100vh" }}
     >
       <header className="bg-[#E05A3A] text-white p-4">
