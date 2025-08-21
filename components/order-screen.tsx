@@ -302,11 +302,18 @@ export default function OrderScreen({
             <p className="text-sm">Please enter your contact details</p>
           </div>
 
-          <div className="p-4">
+          <div className="p-4" style={{ backgroundColor: "#070923" }}>
             <div className="mb-4">
               <label
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 mb-1"
+                style={{
+                color: "#F3B5FD",
+                textShadow:
+                  "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                fontFamily: "monospace",
+                display: "block",
+              }}
               >
                 Name
               </label>
