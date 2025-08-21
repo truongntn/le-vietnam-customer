@@ -315,9 +315,7 @@ export default function OrderScreen({
                   display: "block",
                 }}
               >
-                <p className="text-gray-600">
-                Name
-                </p>
+                <p className="text-gray-600">Name</p>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -343,7 +341,7 @@ export default function OrderScreen({
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700 mb-1 text-gray-600"
+                className="block text-sm font-bold  mb-1 "
                 style={{
                   color: "#F3B5FD",
                   textShadow:
@@ -352,7 +350,7 @@ export default function OrderScreen({
                   display: "block",
                 }}
               >
-                Phone Number
+                <p className="text-gray-600">Phone Number</p>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -469,7 +467,7 @@ export default function OrderScreen({
           <div className="p-4">
             {orderItems.filter((item) => item.quantity > 0).length === 0 ? (
               <p
-                className="text-gray-500 text-center py-4 text-gray-600"
+                className="text-gray-500 text-center py-4"
                 style={{
                   color: "#F3B5FD",
                   textShadow:
@@ -478,7 +476,7 @@ export default function OrderScreen({
                   display: "block",
                 }}
               >
-                No items selected
+                <p className="text-gray-600" No items selected></p>
               </p>
             ) : (
               <>
@@ -487,9 +485,17 @@ export default function OrderScreen({
                   .map((item) => (
                     <div key={item.id} className="flex justify-between py-2">
                       <span>
-                        {item.quantity} x {item.name}
+                        <p className="text-gray-600">
+                          {" "}
+                          {item.quantity} x {item.name}
+                        </p>
                       </span>
-                      <span>${(item.price * item.quantity).toFixed(2)}</span>
+                      <span>
+                        <p className="text-gray-600">
+                          {" "}
+                          ${(item.price * item.quantity).toFixed(2)}
+                        </p>
+                      </span>
                     </div>
                   ))}
 
