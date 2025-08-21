@@ -377,7 +377,7 @@ export default function OrderScreen({
 
         {/* Product Selection */}
         <div
-          className="bg-white rounded-lg shadow-lg  mb-6"
+          className=" rounded-lg shadow-lg  mb-6"
           style={{ borderRadius: "0.5rem" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
@@ -406,7 +406,12 @@ export default function OrderScreen({
                     />
                   </div>
 
-                  <div className="flex-1">
+                  <div className="flex-1"  style={{
+              color: "#F3B5FD",
+              textShadow: "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+              fontFamily: "monospace",
+              display: "block",
+            }}>
                     <h3 className="font-bold text-lg">{product.name}</h3>
                     <p className="text-gray-600 text-sm">
                       {product.description}
