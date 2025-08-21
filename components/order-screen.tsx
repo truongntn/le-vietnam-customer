@@ -467,7 +467,7 @@ export default function OrderScreen({
           <div className="p-4">
             {orderItems.filter((item) => item.quantity > 0).length === 0 ? (
               <p
-                className="text-gray-500 text-center py-4"
+                className="text-gray-600 text-center py-4 font-bold"
                 style={{
                   color: "#F3B5FD",
                   textShadow:
