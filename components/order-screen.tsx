@@ -476,7 +476,7 @@ export default function OrderScreen({
                   display: "block",
                 }}
               >
-                <p className="text-gray-600"> No items selected</p>
+                No items selected
               </p>
             ) : (
               <>
