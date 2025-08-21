@@ -485,35 +485,9 @@ export default function OrderScreen({
                   .map((item) => (
                     <div key={item.id} className="flex justify-between py-2">
                       <span>
-                        <p
-                          className="text-gray-600 font-bold"
-                          style={{
-                            color: "#F3B5FD",
-                            textShadow:
-                              "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                            fontFamily: "monospace",
-                            display: "block",
-                          }}
-                        >
-                          {" "}
-                          {item.quantity} x {item.name}
-                        </p>
+                        {item.quantity} x {item.name}
                       </span>
-                      <span>
-                        <p
-                          className="text-gray-600 font-bold"
-                          style={{
-                            color: "#F3B5FD",
-                            textShadow:
-                              "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                            fontFamily: "monospace",
-                            display: "block",
-                          }}
-                        >
-                          {" "}
-                          ${(item.price * item.quantity).toFixed(2)}
-                        </p>
-                      </span>
+                      <span>${(item.price * item.quantity).toFixed(2)}</span>
                     </div>
                   ))}
 
