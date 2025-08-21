@@ -295,7 +295,7 @@ export default function OrderScreen({
         {/* Customer Information */}
         <div
           className="bg-white rounded-lg shadow-lg  mb-6"
-          style={{ borderRadius: "0.5rem" }}
+          style={{ borderRadius: "0.5rem", borderColor: "#FFD2CC" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Your Information</h2>
@@ -342,6 +342,13 @@ export default function OrderScreen({
               <label
                 htmlFor="phone"
                 className="block text-sm font-medium text-gray-700 mb-1"
+                 style={{
+                color: "#F3B5FD",
+                textShadow:
+                  "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                fontFamily: "monospace",
+                display: "block",
+              }}
               >
                 Phone Number
               </label>
