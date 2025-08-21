@@ -306,7 +306,7 @@ export default function OrderScreen({
             <div className="mb-4">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium  mb-1 text-gray-600"
+                className="block text-sm  mb-1 font-bold text-gray-600"
                 style={{
                   color: "#F3B5FD",
                   textShadow:
