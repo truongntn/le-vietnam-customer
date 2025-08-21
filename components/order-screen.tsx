@@ -491,16 +491,7 @@ export default function OrderScreen({
                     </div>
                   ))}
 
-                <div
-                  className="border-t border-gray-200 mt-4 pt-4 flex justify-between font-bold text-gray-600"
-                  style={{
-                    color: "#F3B5FD",
-                    textShadow:
-                      "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                    fontFamily: "monospace",
-                    display: "block",
-                  }}
-                >
+                <div className="border-t border-gray-200 mt-4 pt-4 flex justify-between font-bold text-gray-600">
                   <span>Total</span>
                   <span>${totalAmount.toFixed(2)}</span>
                 </div>
