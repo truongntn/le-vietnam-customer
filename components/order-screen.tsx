@@ -302,7 +302,7 @@ export default function OrderScreen({
             <p className="text-sm">Please enter your contact details</p>
           </div>
 
-          <div className="p-4" style={{ backgroundColor: "#070923" }}>
+          <div className="p-4">
             <div className="mb-4">
               <label
                 htmlFor="name"
@@ -412,11 +412,11 @@ export default function OrderScreen({
               fontFamily: "monospace",
               display: "block",
             }}>
-                    <h3 className="font-bold text-lg">{product.name}</h3>
+                    <h3 className="font-bold text-lg text-gray-600">{product.name}</h3>
                     <p className="text-gray-600 text-sm">
                       {product.description}
                     </p>
-                    <p className="font-bold mt-1">
+                    <p className="font-bold mt-1 text-gray-600">
                       ${product.price.toFixed(2)}
                     </p>
                   </div>
