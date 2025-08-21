@@ -271,7 +271,17 @@ export default function OrderScreen({
               className="object-contain"
             />
           </div>
-          <h1 className="text-md md:text-xl font-bold">
+          <h1
+            className="text-md md:text-xl font-bold"
+            style={{
+              color: "#F3B5FD",
+              textShadow: "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+              fontFamily: "monospace",
+              fontWeight: 700,
+              display: "block",
+              fontSize: "1.8rem",
+            }}
+          >
             Le Vietnam - Order System
           </h1>
           <div className="md:w-20"></div> {/* Empty div for flex spacing */}
