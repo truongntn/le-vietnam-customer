@@ -377,7 +377,7 @@ export default function OrderScreen({
 
         {/* Product Selection */}
         <div
-          className=" rounded-lg shadow-lg  mb-6"
+          className="bg-white rounded-lg shadow-lg  mb-6"
           style={{ borderRadius: "0.5rem" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
