@@ -468,13 +468,7 @@ export default function OrderScreen({
             {orderItems.filter((item) => item.quantity > 0).length === 0 ? (
               <p
                 className="text-gray-600 text-center py-4 font-bold"
-                style={{
-                  color: "#F3B5FD",
-                  textShadow:
-                    "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                  fontFamily: "monospace",
-                  display: "block",
-                }}
+               
               >
                 No items selected
               </p>
