@@ -295,7 +295,7 @@ export default function OrderScreen({
         {/* Customer Information */}
         <div
           className="bg-white rounded-lg shadow-lg  mb-6"
-          style={{ borderRadius: "0.0rem", border: "solid 1px #FFD2CC" }}
+          style={{ borderRadius: "0.5rem", border: "solid 1px #FFD2CC" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Your Information</h2>
@@ -306,14 +306,14 @@ export default function OrderScreen({
             <div className="mb-4">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-gray-700 mb-1 text-gray-600"
                 style={{
-                color: "#F3B5FD",
-                textShadow:
-                  "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                fontFamily: "monospace",
-                display: "block",
-              }}
+                  color: "#F3B5FD",
+                  textShadow:
+                    "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                  fontFamily: "monospace",
+                  display: "block",
+                }}
               >
                 Name
               </label>
@@ -341,14 +341,14 @@ export default function OrderScreen({
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700 mb-1"
-                 style={{
-                color: "#F3B5FD",
-                textShadow:
-                  "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                fontFamily: "monospace",
-                display: "block",
-              }}
+                className="block text-sm font-medium text-gray-700 mb-1 text-gray-600"
+                style={{
+                  color: "#F3B5FD",
+                  textShadow:
+                    "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                  fontFamily: "monospace",
+                  display: "block",
+                }}
               >
                 Phone Number
               </label>
@@ -406,13 +406,19 @@ export default function OrderScreen({
                     />
                   </div>
 
-                  <div className="flex-1"  style={{
-              color: "#F3B5FD",
-              textShadow: "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-              fontFamily: "monospace",
-              display: "block",
-            }}>
-                    <h3 className="font-bold text-lg text-gray-600">{product.name}</h3>
+                  <div
+                    className="flex-1"
+                    style={{
+                      color: "#F3B5FD",
+                      textShadow:
+                        "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                      fontFamily: "monospace",
+                      display: "block",
+                    }}
+                  >
+                    <h3 className="font-bold text-lg text-gray-600">
+                      {product.name}
+                    </h3>
                     <p className="text-gray-600 text-sm">
                       {product.description}
                     </p>
@@ -460,7 +466,16 @@ export default function OrderScreen({
 
           <div className="p-4">
             {orderItems.filter((item) => item.quantity > 0).length === 0 ? (
-              <p className="text-gray-500 text-center py-4">
+              <p
+                className="text-gray-500 text-center py-4 text-gray-600"
+                style={{
+                  color: "#F3B5FD",
+                  textShadow:
+                    "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                  fontFamily: "monospace",
+                  display: "block",
+                }}
+              >
                 No items selected
               </p>
             ) : (
@@ -476,7 +491,16 @@ export default function OrderScreen({
                     </div>
                   ))}
 
-                <div className="border-t border-gray-200 mt-4 pt-4 flex justify-between font-bold">
+                <div
+                  className="border-t border-gray-200 mt-4 pt-4 flex justify-between font-bold text-gray-600"
+                  style={{
+                    color: "#F3B5FD",
+                    textShadow:
+                      "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                    fontFamily: "monospace",
+                    display: "block",
+                  }}
+                >
                   <span>Total</span>
                   <span>${totalAmount.toFixed(2)}</span>
                 </div>
