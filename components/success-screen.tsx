@@ -40,7 +40,7 @@ export default function SuccessScreen({
 
     // Navigate back to the welcome screen after 8 seconds
     const backToWelcomeTimer = setTimeout(() => {
-      setCurrentScreen("welcome");
+      setCurrentScreen("checkin");
     }, 6000);
 
     return () => {
