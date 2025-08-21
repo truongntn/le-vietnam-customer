@@ -258,7 +258,7 @@ export default function OrderScreen({
       className="min-h-screen bg-[#070923]"
       style={{ overflowY: "auto", height: "100vh" }}
     >
-      <header className="bg-[#E05A3A] text-white p-4">
+      <header className="bg-[#070923] text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/*<button onClick={() => router.back()} className="flex items-center text-white">
            <ArrowLeft className="mr-2" /> Back
