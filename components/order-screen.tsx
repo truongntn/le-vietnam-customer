@@ -486,7 +486,7 @@ export default function OrderScreen({
                     <div key={item.id} className="flex justify-between py-2">
                       <span>
                         <p
-                          className="text-gray-600"
+                          className="text-gray-600 font-bold"
                           style={{
                             color: "#F3B5FD",
                             textShadow:
@@ -501,7 +501,7 @@ export default function OrderScreen({
                       </span>
                       <span>
                         <p
-                          className="text-gray-600"
+                          className="text-gray-600 font-bold"
                           style={{
                             color: "#F3B5FD",
                             textShadow:
