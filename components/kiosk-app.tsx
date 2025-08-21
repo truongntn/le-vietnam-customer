@@ -13,7 +13,7 @@ import { useCustomerStore } from "@/lib/store"
 type Screen = "welcome" | "checkin" | "success" | "kitchen" | "order";
 
 export default function KioskApp() {
-  const [currentScreen, setCurrentScreen] = useState<Screen>("checkin");
+  const [currentScreen, setCurrentScreen] = useState<Screen>("order");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [points, setPoints] = useState(0);
   const [customerName, setCustomerName] = useState("");
