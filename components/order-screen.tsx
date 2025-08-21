@@ -306,7 +306,7 @@ export default function OrderScreen({
             <div className="mb-4">
               <label
                 htmlFor="name"
-                className="block   mb-1 font-bold text-gray-600"
+                className="block text-sm  mb-1 font-bold "
                 style={{
                   color: "#F3B5FD",
                   textShadow:
@@ -315,7 +315,9 @@ export default function OrderScreen({
                   display: "block",
                 }}
               >
+                <p className="text-gray-600">
                 Name
+                </p>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
