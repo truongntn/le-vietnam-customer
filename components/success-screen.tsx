@@ -64,6 +64,48 @@ export default function SuccessScreen({
 
   const floatingElements = generateRandomPositions(10);
 
+  // Matrix effect data
+  const matrixEffect = () => {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.querySelector(".matrix-container")?.appendChild(canvas);
+
+    const chars = "0123456789ABCDEF";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      if (!ctx) return;
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#F3B5FD";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+
+    return () => {
+      canvas.remove();
+    };
+  };
+
+  useEffect(() => {
+    const cleanup = matrixEffect();
+    return cleanup;
+  }, []);
+
   return (
     <div
       className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden matrix-container"
