@@ -366,7 +366,16 @@ export default function OrderScreen({
                     nameError ? "border-red-300" : "border-gray-300"
                   } py-3 shadow-sm focus:border-[#E05A3A] focus:ring focus:ring-[#E05A3A] focus:ring-opacity-50`}
                   placeholder="Enter your name"
-                  style={{ borderRadius: "0.5rem" }}
+                  style={{
+                    borderRadius: "0.5rem",
+                    color: "#F3B5FD",
+                    textShadow:
+                      "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                    fontFamily: "monospace",
+                    fontWeight: 800,
+                    display: "block",
+                    fontSize: "1.0rem",
+                  }}
                 />
               </div>
               {nameError && (
