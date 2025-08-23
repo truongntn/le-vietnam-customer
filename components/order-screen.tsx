@@ -295,7 +295,7 @@ export default function OrderScreen({
         {/* Customer Information */}
         <div
           className="bg-white rounded-lg shadow-lg  mb-6"
-          style={{ borderRadius: "0.0rem", border: "solid 1px #FFD2CC" }}
+          style={{ borderRadius: "0.0rem", border: "solid 1px #070923" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Your Information</h2>
