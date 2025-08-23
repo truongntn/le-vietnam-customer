@@ -310,7 +310,18 @@ export default function OrderScreen({
             >
               Your Information
             </h2>
-            <p className="text-sm">Please enter your contact details</p>
+            <p
+              className="text-sm"
+              style={{
+                color: "#F3B5FD",
+                textShadow:
+                  "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                fontFamily: "monospace",
+                fontWeight: 800,
+              }}
+            >
+              Please enter your contact details
+            </p>
           </div>
 
           <div className="p-4 bg-[#070923]">
