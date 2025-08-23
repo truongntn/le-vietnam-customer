@@ -435,24 +435,30 @@ export default function OrderScreen({
                         {product.name}
                       </p>
                     </h3>
-                    <p className="text-gray-600 text-sm font-bold" style={{
-                          color: "#F3B5FD",
-                          textShadow:
-                            "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                          fontFamily: "monospace",
-                          fontWeight: 800,
-                          fontSize: "1.0rem",
-                        }}>
+                    <p
+                      className="text-gray-600 text-sm font-bold"
+                      style={{
+                        color: "#F3B5FD",
+                        textShadow:
+                          "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                        fontFamily: "monospace",
+                        fontWeight: 800,
+                        fontSize: "0.8rem",
+                      }}
+                    >
                       {product.description}
                     </p>
-                    <p className="font-bold mt-1 text-gray-600 font-bold" style={{
-                          color: "#F3B5FD",
-                          textShadow:
-                            "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
-                          fontFamily: "monospace",
-                          fontWeight: 800,
-                          fontSize: "1.0rem",
-                        }}>
+                    <p
+                      className="font-bold mt-1 text-gray-600 font-bold"
+                      style={{
+                        color: "#F3B5FD",
+                        textShadow:
+                          "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                        fontFamily: "monospace",
+                        fontWeight: 800,
+                        fontSize: "1.0rem",
+                      }}
+                    >
                       ${product.price.toFixed(2)}
                     </p>
                   </div>
