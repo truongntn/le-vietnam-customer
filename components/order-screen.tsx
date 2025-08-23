@@ -431,8 +431,30 @@ export default function OrderScreen({
           style={{ borderRadius: "0.0rem", border: "solid 1px #FFD2CC" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
-            <h2 className="text-xl font-bold">Select Bread</h2>
-            <p className="text-sm">Choose from our freshly baked options</p>
+            <h2
+              className="text-xl font-bold"
+              style={{
+                color: "#F3B5FD",
+                textShadow:
+                  "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                fontFamily: "monospace",
+                fontWeight: 800,
+              }}
+            >
+              Select Bread
+            </h2>
+            <p
+              className="text-sm"
+              style={{
+                color: "#F3B5FD",
+                textShadow:
+                  "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                fontFamily: "monospace",
+                fontWeight: 800,
+              }}
+            >
+              Choose from our freshly baked options
+            </p>
           </div>
 
           <div className="p-4">
