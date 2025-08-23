@@ -317,7 +317,19 @@ export default function OrderScreen({
                   fontSize: "1.0rem",
                 }}
               >
-                <p className="text-gray-600">Name</p>
+                <p
+                  className="text-gray-600"
+                  style={{
+                    color: "#F3B5FD",
+                    textShadow:
+                      "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                    fontFamily: "monospace",
+                    fontWeight: 800,
+                    fontSize: "1.0rem",
+                  }}
+                >
+                  Name
+                </p>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -354,7 +366,19 @@ export default function OrderScreen({
                   fontSize: "1.0rem",
                 }}
               >
-                <p className="text-gray-600">Phone Number</p>
+                <p
+                  className="text-gray-600"
+                  style={{
+                    color: "#F3B5FD",
+                    textShadow:
+                      "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                    fontFamily: "monospace",
+                    fontWeight: 800,
+                    fontSize: "1.0rem",
+                  }}
+                >
+                  Phone Number
+                </p>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
