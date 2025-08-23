@@ -314,7 +314,7 @@ export default function OrderScreen({
                   fontFamily: "monospace",
                   fontWeight: 800,
               display: "block",
-              fontSize: "0.8rem",
+              fontSize: "1.2rem",
                 }}
               >
                 <p className="text-gray-600">Name</p>
@@ -380,7 +380,7 @@ export default function OrderScreen({
         {/* Product Selection */}
         <div
           className=" rounded-lg shadow-lg  mb-6  bg-[#070923]"
-          style={{ borderRadius: "0.0rem" }}
+          style={{ borderRadius: "0.0rem", border: "solid 1px #FFD2CC" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Select Bread</h2>
@@ -421,10 +421,10 @@ export default function OrderScreen({
                     <h3 className="font-bold text-lg text-gray-600">
                       {product.name}
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-sm font-bold">
                       {product.description}
                     </p>
-                    <p className="font-bold mt-1 text-gray-600">
+                    <p className="font-bold mt-1 text-gray-600 font-bold">
                       ${product.price.toFixed(2)}
                     </p>
                   </div>
