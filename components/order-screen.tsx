@@ -502,7 +502,18 @@ export default function OrderScreen({
                 {orderItems
                   .filter((item) => item.quantity > 0)
                   .map((item) => (
-                    <div key={item.id} className="flex justify-between py-2">
+                    <div
+                      key={item.id}
+                      className="flex justify-between py-2"
+                      style={{
+                        color: "#F3B5FD",
+                        textShadow:
+                          "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                        fontFamily: "monospace",
+                        fontWeight: 800,
+                        fontSize: "1.0rem",
+                      }}
+                    >
                       <span>
                         {item.quantity} x {item.name}
                       </span>
@@ -510,7 +521,17 @@ export default function OrderScreen({
                     </div>
                   ))}
 
-                <div className="border-t border-gray-200 mt-4 pt-4 flex justify-between font-bold text-gray-600">
+                <div
+                  className="border-t border-gray-200 mt-4 pt-4 flex justify-between font-bold text-gray-600"
+                  style={{
+                    color: "#F3B5FD",
+                    textShadow:
+                      "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                    fontFamily: "monospace",
+                    fontWeight: 800,
+                    fontSize: "1.0rem",
+                  }}
+                >
                   <span>Total</span>
                   <span>${totalAmount.toFixed(2)}</span>
                 </div>
