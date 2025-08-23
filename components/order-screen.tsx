@@ -313,8 +313,8 @@ export default function OrderScreen({
                     "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
                   fontFamily: "monospace",
                   fontWeight: 800,
-              display: "block",
-              fontSize: "1.2rem",
+                  display: "block",
+                  fontSize: "1.0rem",
                 }}
               >
                 <p className="text-gray-600">Name</p>
@@ -349,7 +349,9 @@ export default function OrderScreen({
                   textShadow:
                     "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
                   fontFamily: "monospace",
+                  fontWeight: 800,
                   display: "block",
+                  fontSize: "1.0rem",
                 }}
               >
                 <p className="text-gray-600">Phone Number</p>
@@ -442,7 +444,20 @@ export default function OrderScreen({
                       <Minus size={16} />
                     </button>
 
-                    <span className="mx-3 w-6 text-center">{quantity}</span>
+                    <span
+                      className="mx-3 w-6 text-center"
+                      style={{
+                        color: "#F3B5FD",
+                        textShadow:
+                          "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                        fontFamily: "monospace",
+                        fontWeight: 800,
+                        display: "block",
+                        fontSize: "1.0rem",
+                      }}
+                    >
+                      {quantity}
+                    </span>
 
                     <button
                       onClick={() => updateQuantity(product.id, 1)}
@@ -468,10 +483,7 @@ export default function OrderScreen({
 
           <div className="p-4">
             {orderItems.filter((item) => item.quantity > 0).length === 0 ? (
-              <p
-                className="text-gray-600 text-center py-4 font-bold"
-               
-              >
+              <p className="text-gray-600 text-center py-4 font-bold">
                 No items selected
               </p>
             ) : (
