@@ -302,7 +302,7 @@ export default function OrderScreen({
             <p className="text-sm">Please enter your contact details</p>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 bg-[#070923]">
             <div className="mb-4">
               <label
                 htmlFor="name"
