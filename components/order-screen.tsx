@@ -474,8 +474,8 @@ export default function OrderScreen({
 
         {/* Order Summary */}
         <div
-          className="bg-white rounded-lg shadow-lg  mb-6"
-          style={{ borderRadius: "0.5rem" }}
+          className=" rounded-lg shadow-lg  mb-6  bg-[#070923]"
+          style={{ borderRadius: "0.0rem", border: "solid 1px #FFD2CC" }}
         >
           <div className="p-4 bg-[#FFD2CC]">
             <h2 className="text-xl font-bold">Order Summary</h2>
@@ -483,7 +483,18 @@ export default function OrderScreen({
 
           <div className="p-4">
             {orderItems.filter((item) => item.quantity > 0).length === 0 ? (
-              <p className="text-gray-600 text-center py-4 font-bold">
+              <p
+                className="text-gray-600 text-center py-4 font-bold"
+                style={{
+                  color: "#F3B5FD",
+                  textShadow:
+                    "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                  fontFamily: "monospace",
+                  fontWeight: 800,
+                  display: "block",
+                  fontSize: "1.0rem",
+                }}
+              >
                 No items selected
               </p>
             ) : (
