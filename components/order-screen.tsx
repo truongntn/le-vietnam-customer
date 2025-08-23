@@ -422,24 +422,37 @@ export default function OrderScreen({
                   >
                     <h3 className="font-bold text-lg text-gray-600">
                       <p
-                        className="text-gray-600 text-center py-4 font-bold"
+                        className="text-gray-600 py-4 font-bold"
                         style={{
                           color: "#F3B5FD",
                           textShadow:
                             "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
                           fontFamily: "monospace",
                           fontWeight: 800,
-                          display: "block",
                           fontSize: "1.0rem",
                         }}
                       >
                         {product.name}
                       </p>
                     </h3>
-                    <p className="text-gray-600 text-sm font-bold">
+                    <p className="text-gray-600 text-sm font-bold" style={{
+                          color: "#F3B5FD",
+                          textShadow:
+                            "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                          fontFamily: "monospace",
+                          fontWeight: 800,
+                          fontSize: "1.0rem",
+                        }}>
                       {product.description}
                     </p>
-                    <p className="font-bold mt-1 text-gray-600 font-bold">
+                    <p className="font-bold mt-1 text-gray-600 font-bold" style={{
+                          color: "#F3B5FD",
+                          textShadow:
+                            "0 0 5px #F3B5FD, 0 0 10px #F3B5FD, 0 0 15px #F3B5FD",
+                          fontFamily: "monospace",
+                          fontWeight: 800,
+                          fontSize: "1.0rem",
+                        }}>
                       ${product.price.toFixed(2)}
                     </p>
                   </div>
