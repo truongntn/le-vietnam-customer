@@ -375,6 +375,7 @@ export default function OrderScreen({
                     fontWeight: 800,
                     display: "block",
                     fontSize: "1.0rem",
+                    backgroundColor: "#070923",
                   }}
                 />
               </div>
@@ -433,6 +434,7 @@ export default function OrderScreen({
                     fontWeight: 800,
                     display: "block",
                     fontSize: "1.0rem",
+                    backgroundColor: "#070923",
                   }}
                 />
               </div>
