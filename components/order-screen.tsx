@@ -365,7 +365,7 @@ export default function OrderScreen({
                   className={`pl-10 block w-full rounded-md border ${
                     nameError ? "border-red-300" : "border-gray-300"
                   } py-3 shadow-sm focus:border-[#E05A3A] focus:ring focus:ring-[#E05A3A] focus:ring-opacity-50`}
-                  placeholder="Enter your name"
+                  //placeholder="Enter your name"
                   style={{
                     borderRadius: "0.5rem",
                     color: "#F3B5FD",
@@ -424,7 +424,7 @@ export default function OrderScreen({
                   className={`pl-10 block w-full rounded-md border ${
                     phoneError ? "border-red-300" : "border-gray-300"
                   } py-3 shadow-sm focus:border-[#E05A3A] focus:ring focus:ring-[#E05A3A] focus:ring-opacity-50`}
-                  placeholder="Enter your phone number"
+                  //placeholder="Enter your phone number"
                   style={{
                     borderRadius: "0.5rem",
                     color: "#F3B5FD",
